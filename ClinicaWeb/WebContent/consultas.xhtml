@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<title>Consultas</title>
+</head>
+<body>
+	<h2>Consultas</h2>
+	<h:dataTable value="#{Consulta.consulta}" var="teste1">
+		<h:column>
+			<f:facet name="header">ID</f:facet> #{teste1.idConsulta} </h:column>
+	<h:column>
+			<f:facet name="header">Data</f:facet> #{teste1.dataConsulta} </h:column>
+		<h:column>
+			<f:facet name="header">Hora</f:facet> #{teste1.horaConsulta} </h:column>
+		<h:column>
+			<f:facet name="header">Observação</f:facet> #{teste1.obsConsulta} </h:column>
+		<h:column>
+			<f:facet name="header">Paciente</f:facet> #{teste1.getNOMEPACConsulta()} </h:column>
+		<h:column>
+			<f:facet name="header">Medico</f:facet> #{teste1.getNOMEmedicoCOnsulta()} </h:column>
+	</h:dataTable>
+	<h:form>
+	<h:commandButton value="Página Principal" action="Home" />
+	</h:form>
+
+</body>
+</html>

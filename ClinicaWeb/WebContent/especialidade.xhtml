@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<title>Especialidades</title>
+</head>
+<body>
+	<h2>Especialidades</h2>
+	<h:dataTable value="#{Especialidade.especialidade}" var="teste">
+		<h:column>
+			<f:facet name="header">ID</f:facet> #{teste.idEspecialidade} </h:column>
+		<h:column>
+			<f:facet name="header">Nome</f:facet> #{teste.nomeEspecialidade} </h:column>
+	</h:dataTable>
+	<h:form>
+	<h:commandButton value="Página Principal" action="Home" />
+	</h:form>
+</body>
+</html>
